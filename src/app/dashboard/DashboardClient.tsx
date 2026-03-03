@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback, useRef } from 'react'
 import { BackgroundBlobs } from '@/components/layout/BackgroundBlobs'
+import { AccountButton } from '@/components/layout/AccountButton'
 import { BottomNav, type NavView } from '@/components/layout/BottomNav'
 import { Toast } from '@/components/ui/Toast'
 import { HomeView } from '@/components/journal/HomeView'
@@ -110,12 +111,15 @@ export function DashboardClient({ user }: DashboardClientProps) {
           className="glass-card flex-shrink-0 z-10"
           style={{ borderRadius: '0 0 32px 32px', borderTop: 'none' }}
         >
-          <div className="flex items-center justify-center gap-2.5 px-5 pb-3.5"
+          <div className="flex items-center justify-between px-5 pb-3.5"
             style={{ paddingTop: 'max(40px, env(safe-area-inset-top, 40px))' }}
           >
-            <span className="text-lg" style={{ color: 'var(--accent)', filter: 'drop-shadow(0 0 8px rgba(0,122,255,0.35))' }}>✦</span>
-            <h1 className="text-[19px] font-bold tracking-tight">Daily Journal</h1>
             <span className="text-lg opacity-0">✦</span>
+            <div className="flex items-center gap-2.5">
+              <span className="text-lg" style={{ color: 'var(--accent)', filter: 'drop-shadow(0 0 8px rgba(0,122,255,0.35))' }}>✦</span>
+              <h1 className="text-[19px] font-bold tracking-tight">Daily Journal</h1>
+            </div>
+            <AccountButton user={user} />
           </div>
         </header>
 
