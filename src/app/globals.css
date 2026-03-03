@@ -22,6 +22,12 @@
   --nav-height: 80px;
 }
 
+@media (min-width: 768px) {
+  :root {
+    --nav-height: 90px;
+  }
+}
+
 * { box-sizing: border-box; }
 
 html, body {

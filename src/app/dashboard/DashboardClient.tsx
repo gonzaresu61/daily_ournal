@@ -105,7 +105,7 @@ export function DashboardClient({ user }: DashboardClientProps) {
     <div className="relative h-screen overflow-hidden">
       <BackgroundBlobs />
 
-      <div className="relative z-10 flex flex-col h-full max-w-[430px] mx-auto overflow-hidden">
+      <div className="relative z-10 flex flex-col h-full w-full max-w-[430px] md:max-w-[680px] mx-auto overflow-hidden">
         {/* App Header */}
         <header
           className="glass-card flex-shrink-0 z-10"
@@ -253,7 +253,7 @@ function ViewSlot({ active, children }: { active: boolean; children: React.React
           : 'opacity-0 translate-x-8 pointer-events-none'
       )}
       style={{
-        padding: '16px 16px calc(var(--nav-height) + 20px + var(--safe-bottom))',
+        padding: '16px 16px calc(var(--nav-height) + 20px + env(safe-area-inset-bottom, 0px))',
         scrollbarWidth: 'none',
         WebkitOverflowScrolling: 'touch',
       }}

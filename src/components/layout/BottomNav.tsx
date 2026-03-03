@@ -26,7 +26,9 @@ export function BottomNav({ currentView, trashCount, onNavigate }: BottomNavProp
       style={{
         borderRadius: '32px 32px 0 0',
         borderBottom: 'none',
-        paddingBottom: 'calc(8px + var(--safe-bottom))',
+        paddingBottom: 'calc(8px + env(safe-area-inset-bottom, 0px))',
+        paddingLeft: 'env(safe-area-inset-left, 0px)',
+        paddingRight: 'env(safe-area-inset-right, 0px)',
       }}
     >
       {NAV_ITEMS.map(({ view, label, Icon }) => {
