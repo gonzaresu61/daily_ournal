@@ -105,13 +105,13 @@ export function DashboardClient({ user }: DashboardClientProps) {
     <div className="relative h-screen overflow-hidden">
       <BackgroundBlobs />
 
-      <div className="relative z-10 flex flex-col h-full w-full max-w-[430px] md:max-w-[680px] mx-auto overflow-hidden">
+      <div className="relative z-10 flex flex-col h-full w-full overflow-hidden">
         {/* App Header */}
         <header
           className="glass-card flex-shrink-0 z-10"
           style={{ borderRadius: '0 0 32px 32px', borderTop: 'none' }}
         >
-          <div className="flex items-center justify-between px-5 pb-3.5"
+          <div className="flex items-center justify-between px-5 pb-3.5 max-w-[680px] mx-auto w-full"
             style={{ paddingTop: 'max(40px, env(safe-area-inset-top, 40px))' }}
           >
             <span className="text-lg opacity-0">✦</span>
@@ -253,7 +253,7 @@ function ViewSlot({ active, children }: { active: boolean; children: React.React
           : 'opacity-0 translate-x-8 pointer-events-none'
       )}
       style={{
-        padding: '16px 16px calc(var(--nav-height) + var(--safe-bottom) + 20px)',
+        padding: '16px 16px calc(var(--nav-height) + var(--safe-bottom) + 20px)', maxWidth: '680px', marginLeft: 'auto', marginRight: 'auto',
         scrollbarWidth: 'none',
         WebkitOverflowScrolling: 'touch',
       }}

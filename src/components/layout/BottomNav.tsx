@@ -33,10 +33,10 @@ export function BottomNav({ currentView, trashCount, onNavigate }: BottomNavProp
         height: 'calc(var(--nav-height) + var(--safe-bottom))',
         paddingBottom: 'var(--safe-bottom)',
         paddingTop: '8px',
-        maxWidth: '680px',
-        margin: '0 auto',
+
       }}
     >
+      <div style={{ maxWidth: '680px', margin: '0 auto', width: '100%', display: 'flex' }}>
       {NAV_ITEMS.map(({ view, label, Icon }) => {
         const active = currentView === view
         return (
@@ -87,6 +87,7 @@ export function BottomNav({ currentView, trashCount, onNavigate }: BottomNavProp
           </button>
         )
       })}
+      </div>
     </nav>
   )
 }
