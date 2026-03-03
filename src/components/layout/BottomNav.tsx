@@ -22,13 +22,19 @@ const NAV_ITEMS: { view: NavView; label: string; Icon: React.ElementType }[] = [
 export function BottomNav({ currentView, trashCount, onNavigate }: BottomNavProps) {
   return (
     <nav
-      className="glass-card flex-shrink-0 flex z-10"
+      className="glass-card flex z-50"
       style={{
+        position: 'fixed',
+        left: 0,
+        right: 0,
+        bottom: 0,
         borderRadius: '32px 32px 0 0',
         borderBottom: 'none',
-        paddingBottom: 'calc(8px + env(safe-area-inset-bottom, 0px))',
-        paddingLeft: 'env(safe-area-inset-left, 0px)',
-        paddingRight: 'env(safe-area-inset-right, 0px)',
+        height: 'calc(var(--nav-height) + var(--safe-bottom))',
+        paddingBottom: 'var(--safe-bottom)',
+        paddingTop: '8px',
+        maxWidth: '680px',
+        margin: '0 auto',
       }}
     >
       {NAV_ITEMS.map(({ view, label, Icon }) => {

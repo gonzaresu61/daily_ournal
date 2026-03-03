@@ -253,7 +253,7 @@ function ViewSlot({ active, children }: { active: boolean; children: React.React
           : 'opacity-0 translate-x-8 pointer-events-none'
       )}
       style={{
-        padding: '16px 16px calc(var(--nav-height) + 20px + env(safe-area-inset-bottom, 0px))',
+        padding: '16px 16px calc(var(--nav-height) + var(--safe-bottom) + 20px)',
         scrollbarWidth: 'none',
         WebkitOverflowScrolling: 'touch',
       }}
