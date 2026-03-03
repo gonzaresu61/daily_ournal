@@ -32,6 +32,13 @@ html, body {
   overflow: hidden;
 }
 
+/* iPad対応 */
+@media (min-width: 768px) {
+  :root {
+    --nav-height: 88px;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
