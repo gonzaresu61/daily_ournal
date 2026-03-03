@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, useRef } from 'react'
 import { BackgroundBlobs } from '@/components/layout/BackgroundBlobs'
 import { BottomNav, type NavView } from '@/components/layout/BottomNav'
 import { Toast } from '@/components/ui/Toast'
